@@ -8,3 +8,16 @@
 
 ## Running
 Just start it as part of your docker-compose config, no additional steps required anymore.
+
+Example for a docker-compose entry:
+```yaml
+seafile:
+  image: florianloch/seafile_basic
+  ports:
+  - 8000:8000
+  - 8082:8082
+  volumes:
+  - /var/seafile:/seafile
+  stdin_open: true
+  tty: true
+```
