@@ -6,6 +6,20 @@
 2. `cd /seafile/<version>` followed by `./setup-seafile.sh`
 3. `./seafile.sh ssh` and `./seahub.ssh`
 
+
+## Update
+Follow the official instructions in the Seafile docs, propably you do not even need to run the container for it, just download, unzip and then run the update scripts locally.
+
+```bash
+version=6.1.0
+wget https://bintray.com/artifact/download/seafile-org/seafile/seafile-server_${version}_x86-64.tar.gz
+tar -xzf seafile-server_${version}_x86-64.tar.gz
+rm seafile.tar.gz
+
+cd /var/seafile/seafile-server-${version}/upgrade
+# Run the upgrade scripts
+```
+
 ## Running
 Just start it as part of your docker-compose config, no additional steps required anymore.
 
